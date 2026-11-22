@@ -1,12 +1,4 @@
-# VLM4Bio
-[[**🤗 HF Dataset**](https://huggingface.co/datasets/imageomics/VLM4Bio)]  |  [[**🔒 License Information**](https://huggingface.co/datasets/imageomics/VLM4Bio#licensing-information)] | [[**♠️ Dataset Card**](https://huggingface.co/datasets/imageomics/VLM4Bio#dataset-card-for-vlm4bio)]
-
-This repository contains the full pipeline and evaluation code for the paper **"[VLM4Bio: A Benchmark Dataset to Evaluate Pretrained Vision-Language Models for Trait Discovery from Biological Images.](https://arxiv.org/abs/2408.16176)"**
-
-![Alt text](assests/teaser.png)
-
-## Abstract
-Images are increasingly becoming the currency for documenting biodiversity on the planet, providing novel opportunities for accelerating scientific discoveries in the field of organismal biology, especially with the advent of large  vision-language models (VLMs). We ask if pre-trained VLMs can aid scientists in answering a range of biologically relevant questions without any additional fine-tuning. In this paper, we evaluate the effectiveness of 12 state-of-the-art (SOTA) VLMs in the field of organismal biology using a novel dataset, **VLM4Bio**, consisting of $~469K$ question-answer pairs involving $30K$ images from three groups of organisms: fishes, birds, and butterflies, covering five biologically relevant tasks. We also explore the effects of applying prompting techniques and tests for reasoning hallucination on the performance of VLMs, shedding new light on the capabilities of current SOTA VLMs in answering biologically relevant questions using images.
+opportunities for accelerating scientific discoveries in the field of organismal biology, especially with the advent of large  vision-language models (VLMs). We ask if pre-trained VLMs can aid scientists in answering a range of biologically relevant questions without any additional fine-tuning. In this paper, we evaluate the effectiveness of 12 state-of-the-art (SOTA) VLMs in the field of organismal biology using a novel dataset, **VLM4Bio**, consisting of $~469K$ question-answer pairs involving $30K$ images from three groups of organisms: fishes, birds, and butterflies, covering five biologically relevant tasks. We also explore the effects of applying prompting techniques and tests for reasoning hallucination on the performance of VLMs, shedding new light on the capabilities of current SOTA VLMs in answering biologically relevant questions using images.
 
 
 ## Tasks
@@ -23,20 +15,7 @@ We conducted our evaluation on five scientific tasks relevant to biologists in t
 |Genera | 178 | Genera | 114 | Genera | 27 | 
 
 
-We used image collections of three taxonomic groups of organisms: Fish (contained $10K$ images), Bird (containing $10K$ images), and Butterfly (containing $10K$ images). The motivation for choosing these datasets is to evaluate the effectiveness of VLMs in answering biological questions over a range of bio-diverse organisms.
-
-## Download Datasets
-The datasets can be downloaded from this [repository](https://huggingface.co/datasets/imageomics/VLM4Bio):
-
-Download the dataset and order the files like the following in the ```data/``` folder.
-
-```
-data/
-└── VLM4Bio/
-    └── datasets/
-        ├── Fish/
-        │   ├── images/
-        │   │   ├── INHS_FISH_58870.jpg
+We used image collections of three taxonomic groups of organisms: Fish (contained $10K$ images), Bird (ctab    │   │   ├── INHS_FISH_58870.jpg
         │   │   ├── INHS_FISH_58819.jpg
         │   │   └── ...
         │   └── metadata/
@@ -55,7 +34,7 @@ data/
         └── Butterfly/
             ├── images/
             │   ├── butterfly_train_heliconius_sara_0007.jpg
-            │   ├── butterfly_val_pyrrhogyra_cramen_0001.jpg
+            │   ├── butterfly_val_pyrrhogyra_cramen_0001.jpgminigpt4_eval_configs/eval_minigpt4-vicuna-13B.yaml
             │   └── ...
             └── metadata/
                 ├── metadata.csv
@@ -66,9 +45,7 @@ data/
 We used multiple environments to run the VLMs. One should follow the setting up environment instructions of the VLM repositories to set up the environments.
 | Environments | Models | Instruction |
 |----------|----------|----------|
-| llava | llava-v1.5-7b, llava-v1.5-13b, gpt-4v | [link](https://github.com/haotian-liu/LLaVA?tab=readme-ov-file#install) |
-| vlm_env | cogvlm-chat | [link](https://github.com/THUDM/CogVLM?tab=readme-ov-file#option-2deploy-cogvlm--cogagent-by-yourself) |
-| minigptv | minigpt4-vicuna-7B, minigpt4-vicuna-13B | [link](https://github.com/Vision-CAIR/MiniGPT-4?tab=readme-ov-file#installation)|
+| llava | llava-v1.5-7b, llava-v1.5-13b, gpt-4v | [link](https://github.com/haotian-liu/LLaVA?tab=rminigptv | minigpt4-vicuna-7B, minigpt4-vicuna-13B | [link](https://github.com/Vision-CAIR/MiniGPT-4?tab=readme-ov-file#installation)|
 | blip | blip-flan-xl, blip-flan-xxl | [link](https://github.com/salesforce/BLIP?tab=readme-ov-file#blip-bootstrapping-language-image-pre-training-for-unified-vision-language-understanding-and-generation) |
 | instruct_blip | instruct-vicuna7b, instruct-vicuna13b, instruct-flant5xl, instruct-flant5xxl | [link](https://github.com/salesforce/LAVIS/blob/main/projects/instructblip/README.md#install-from-source) |
 
